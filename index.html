@@ -9,7 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="style.css">
 
-	<title>AdminHub</title>
+	<title>Admin</title>
 </head>
 <body>
 
@@ -24,22 +24,22 @@
 			<li class="active">
 				<a href="#">
 					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Dashboard</span>
+					<span class="text">Thống kê</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">My Store</span>
+					<span class="text">Quản lý sản phẩm</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Analytics</span>
+					<span class="text">Quản lý tài khoản</span>
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Message</span>
@@ -50,7 +50,7 @@
 					<i class='bx bxs-group' ></i>
 					<span class="text">Team</span>
 				</a>
-			</li>
+			</li> -->
 		</ul>
 		<ul class="side-menu">
 			<!-- <li>
@@ -62,7 +62,7 @@
 			<li>
 				<a href="#" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
-					<span class="text">Logout</span>
+					<span class="text">Đăng xuất</span>
 				</a>
 			</li>
 		</ul>
@@ -99,7 +99,7 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Dashboard</h1>
+					<h1>Thống kê</h1>
 					<!-- <ul class="breadcrumb">
 						<li>
 							<a href="#">Dashboard</a>
@@ -118,24 +118,24 @@
 
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
+					<i class='bx bx-face' ></i>
 					<span class="text">
 						<h3>1020</h3>
-						<p>New Order</p>
+						<p>Người dùng</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
 						<h3>2834</h3>
-						<p>Visitors</p>
+						<p>Lượt truy cập</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-dollar-circle' ></i>
 					<span class="text">
 						<h3>$2543</h3>
-						<p>Total Sales</p>
+						<p>Doanh thu</p>
 					</span>
 				</li>
 			</ul>
@@ -234,11 +234,11 @@
 			<!-- Set width <100% se fix dc loi responsive cua chart.js -->
 			<div class ="charts">
 				<div class ="chart" style="position: relative; max-height:800px; width:99%; ">
-					<h2>Doanh thu (12 months)</h2>
+					<h2>Doanh thu (12 tháng)</h2>
 					<canvas id="lineChart" ></canvas>
 				</div>
 				<div class="chart" id="doughnut-chart" style="position: relative; max-height:800px; width:99%; ">
-					<h2>User by Age</h2>
+					<h2>Độ tuổi người dùng</h2>
 					<canvas id="doughnut" ></canvas>
 				</div>
 			</div>
