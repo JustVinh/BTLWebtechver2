@@ -1,0 +1,99 @@
+sortedData =[
+		{
+			'ma': '1',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '2',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '3',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '4',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '5',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '6',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '7',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '8',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '9',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '5',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '6',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '7',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '8',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '9',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},]

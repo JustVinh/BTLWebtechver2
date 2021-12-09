@@ -195,140 +195,140 @@ var tableData2 =[
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '5',
+		'ma': '10',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '6',
+		'ma': '11',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '7',
+		'ma': '12',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '8',
+		'ma': '13',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '9',
+		'ma': '933',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '5',
+		'ma': '543',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '6',
+		'ma': '546',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '7',
+		'ma': '7655',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '8',
+		'ma': '845',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '9',
+		'ma': '9342',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '5',
+		'ma': '554',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '6',
+		'ma': '665',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '7',
+		'ma': '7234',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '8',
+		'ma': '8545',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '9',
+		'ma': '92131',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '5',
+		'ma': '554',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '6',
+		'ma': '611',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '7',
+		'ma': '754',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '8',
+		'ma': '8123',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
 		'hang':'Faber Castell'
 	},
 	{
-		'ma': '9',
+		'ma': '954',
 		'ten': "Magic Stick",
 		'gia':'	1203 VND',
 		'loai': 'Phụ kiện',
@@ -344,123 +344,235 @@ var tableData2 =[
 
 
 var state = {
-'querySet': tableData2,
+	'querySet': tableData2,
 
-'page': 1,
-'rows': 5,
-'window': 5,
+	'page': 1,
+	'rows': 5,
+	'window': 5,
 }
 
 buildTable()
 
 function pagination(querySet, page, rows) {
 
-var trimStart = (page - 1) * rows
-var trimEnd = trimStart + rows
+	var trimStart = (page - 1) * rows
+	var trimEnd = trimStart + rows
 
-var trimmedData = querySet.slice(trimStart, trimEnd)
+	var trimmedData = querySet.slice(trimStart, trimEnd)
 
-var pages = Math.round(querySet.length / rows);
+	var pages = Math.round(querySet.length / rows);
 
-return {
-	'querySet': trimmedData,
-	'pages': pages,
-}
+	return {
+		'querySet': trimmedData,
+		'pages': pages,
+	}
 }
 
 function pageButtons(pages) {
-var wrapper = document.getElementById('pagination-wrapper')
+	var wrapper = document.getElementById('pagination-wrapper')
 
-wrapper.innerHTML = ``
-console.log('Pages:', pages)
+	wrapper.innerHTML = ``
+	console.log('Pages:', pages)
 
-var maxLeft = (state.page - Math.floor(state.window / 2))
-var maxRight = (state.page + Math.floor(state.window / 2))
+	var maxLeft = (state.page - Math.floor(state.window / 2))
+	var maxRight = (state.page + Math.floor(state.window / 2))
 
-if (maxLeft < 1) {
-	maxLeft = 1
-	maxRight = state.window
-}
-
-if (maxRight > pages) {
-	maxLeft = pages - (state.window - 1)
-	
-	if (maxLeft < 1){
+	if (maxLeft < 1) {
 		maxLeft = 1
-	}
-	maxRight = pages
-}
-
-
-for (var page = maxLeft; page <= maxRight; page++) {
-	let noPage = page - maxLeft + 1;
-	//jquery ra <li> nen se lay value cua <li>
-	//bug: label k active duoc radio button
-	wrapper.innerHTML += `<li value=${page} class="page"><label for="paginacao${noPage}" class="paginacao">${page}</label></li>`
-} 
-
-if (state.page != 1) {
-	wrapper.innerHTML = `<li value=${1} class="page"><label for="paginacaofirst" class="paginacao">&#171; First</label></li>` + wrapper.innerHTML
-}
-
-if (state.page != pages) {
-	wrapper.innerHTML += `<li value=${pages} class="page"><label for="paginacaolast" class="paginacao">&#187; Last</label></li>`
-}
-
-$('.page').on('click', function() {
-	console.log("ban dau")
-	
-	console.log(maxLeft)
-	$('#table-body').empty()
-	state.page = Number($(this).val())
-	buildTable()
-
-	//state duoc update nen max left, max right neu duoc re-calculate thi se cho ra gia tri khac
-	//vi co su dich chuyen cac button
-	//vi du: click button 4, vi tri button thu 4 se sa'ng, tuy nhien do max left thay doi nen vi tri cua button 4 se khong nam o vi tri so 4 nua
-	//xoa doan code sau de display bug
-	console.log("luc sau")
-	var localmaxLeft = (state.page - Math.floor(state.window / 2))
-	var localmaxRight = (state.page + Math.floor(state.window / 2))
-
-	if (localmaxLeft < 1) {
-		localmaxLeft = 1
-		localmaxRight = state.window
+		maxRight = state.window
 	}
 
-	if (localmaxRight > pages) {
-		localmaxLeft = pages - (state.window - 1)
+	if (maxRight > pages) {
+		maxLeft = pages - (state.window - 1)
 		
-		if (localmaxLeft < 1){
-			localmaxLeft = 1
+		if (maxLeft < 1){
+			maxLeft = 1
 		}
-		localmaxRight = pages
+		maxRight = pages
 	}
-	console.log(localmaxLeft)
-	let noPage = Number($(this).val()) - localmaxLeft + 1
-	$(`#paginacao${noPage}`).prop("checked", true)
-})
+
+
+	for (var page = maxLeft; page <= maxRight; page++) {
+		let noPage = page - maxLeft + 1;
+		//jquery ra <li> nen se lay value cua <li>
+		//bug: label k active duoc radio button
+		wrapper.innerHTML += `<li value=${page} class="page"><label for="paginacao${noPage}" class="paginacao">${page}</label></li>`
+	} 
+
+	if (state.page != 1) {
+		wrapper.innerHTML = `<li value=${1} class="page"><label for="paginacaofirst" class="paginacao">&#171;</label></li>` + wrapper.innerHTML
+	}
+
+	if (state.page != pages) {
+		wrapper.innerHTML += `<li value=${pages} class="page"><label for="paginacaolast" class="paginacao">&#187;</label></li>`
+	}
+
+	$('.page').on('click', function() {
+		// console.log("ban dau")
+		
+		console.log(maxLeft)
+		//phai empty truoc moi dc build table
+		$('#table-body').empty()
+		state.page = Number($(this).val())
+		buildTable()
+
+		//state duoc update nen max left, max right neu duoc re-calculate thi se cho ra gia tri khac
+		//vi co su dich chuyen cac button
+		//vi du: click button 4, vi tri button thu 4 se sa'ng, tuy nhien do max left thay doi nen vi tri cua button 4 se khong nam o vi tri so 4 nua
+		//xoa doan code sau de display bug
+		// console.log("luc sau")
+		var localmaxLeft = (state.page - Math.floor(state.window / 2))
+		var localmaxRight = (state.page + Math.floor(state.window / 2))
+
+		if (localmaxLeft < 1) {
+			localmaxLeft = 1
+			localmaxRight = state.window
+		}
+
+		if (localmaxRight > pages) {
+			localmaxLeft = pages - (state.window - 1)
+			
+			if (localmaxLeft < 1){
+				localmaxLeft = 1
+			}
+			localmaxRight = pages
+		}
+		console.log(localmaxLeft)
+		let noPage = Number($(this).val()) - localmaxLeft + 1
+		$(`#paginacao${noPage}`).prop("checked", true)
+	})
 
 
 }
 
 function buildTable() {
-var table = $('#table-body')
+	var table = $('#table-body')
 
-var data = pagination(state.querySet, state.page, state.rows)
-var myList = data.querySet
+	var data = pagination(state.querySet, state.page, state.rows)
+	var myList = data.querySet
 
-for (var i = 1 in myList) {
-	var row = `<tr>
-			<td>${myList[i].ma}</td>
-			<td>${myList[i].ten}</td>
-			<td>${myList[i].gia}</td>
-			<td>${myList[i].loai}</td>
-			<td>${myList[i].hang}</td>
-			<td><span class="status completed">Xem</span></td>
-			  `
-	table.append(row)
+	for (var i = 1 in myList) {
+		console.log(`adding data no ${i}`)
+		var row = `<tr>
+				<td>${myList[i].ma}</td>
+				<td>${myList[i].ten}</td>
+				<td>${myList[i].gia}</td>
+				<td>${myList[i].loai}</td>
+				<td>${myList[i].hang}</td>
+				<td><span class="status completed">Xem</span></td>
+				`
+		table.append(row)
+	}
+
+	pageButtons(data.pages)
 }
 
-pageButtons(data.pages)
-}
+//sortByPrice
+const priceSortBtn = document.querySelector('#content main .table-data .order table th i') 
+priceSortBtn.addEventListener('click', ()=>{
+	sortedData =[
+		{
+			'ma': '1',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '2',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '3',
+			'ten': "PS5",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '4',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '5',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '6',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '7',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '8',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '9',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '5',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '6',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '7',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '8',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},
+		{
+			'ma': '9',
+			'ten': "Magic Stick",
+			'gia':'	1203 VND',
+			'loai': 'Phụ kiện',
+			'hang':'Faber Castell'
+		},]
+	state.querySet=sortedData
+	state.page = 1
+	console.log(state.querySet)
+	$('#table-body').empty()
+	buildTable()
+	console.log("Xoa data")
+})

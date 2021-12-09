@@ -452,6 +452,12 @@ body {
 	text-align: left;
 	border-bottom: 1px solid var(--grey);
 }
+#content main .table-data .order table th i{
+	margin-left: 30px;
+}
+#content main .table-data .order table th i :hover{
+	background-color: var(--grey);
+}
 #content main .table-data .order table td {
 	padding: 16px 0;
 }
@@ -586,6 +592,8 @@ body {
 	border-radius: 0 36px 36px 0;
 	cursor: pointer;
 }
+
+
 /* CRUD finder end */
 
 
@@ -648,6 +656,7 @@ input[class*="forPaginate"]{
   }
   .btn-paginacao ul li label:hover {
 	/* background-color: #FF1493; */
+	border-radius: 10px;
 	background-color: #FF1493;
 	color: #FFF;
   }
@@ -656,21 +665,26 @@ input[class*="forPaginate"]{
   
   #paginacao1:checked ~ .pagination-container label[for*="paginacao1"] {
 	background-color: #FF1493;
+	border-radius: 10px;
 	color: #FFF;
   }
   #paginacao2:checked ~ .pagination-container label[for*="paginacao2"] {
+	border-radius: 10px;
 	background-color: #FF1493;
 	color: #FFF;
   }
   #paginacao3:checked ~ .pagination-container label[for*="paginacao3"] {
+	border-radius: 10px;
 	background-color: #FF1493;
 	color: #FFF;
   }
   #paginacao4:checked ~ .pagination-container label[for*="paginacao4"] {
+	border-radius: 10px;
 	background-color: #FF1493;
 	color: #FFF;
   }
   #paginacao5:checked ~ .pagination-container label[for*="paginacao5"] {
+	border-radius: 10px;
 	background-color: #FF1493;
 	color: #FFF;
   }
