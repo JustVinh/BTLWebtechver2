@@ -8,7 +8,7 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="style.css">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<title>Admin</title>
 </head>
 <body>
@@ -144,10 +144,10 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Recent Orders</h3>
+						<h3>Danh sách sản phẩm</h3>
 						<form action="#">
 							<div class="form-input">
-								<input type="search" placeholder="Search...">
+								<input type="search" placeholder="Tìm kiếm...">
 								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 							</div>
 						</form>
@@ -162,68 +162,69 @@
 								<th>Giá</th>
 								<th>Loại</th>
 								<th>Hãng</th>
-								<th>Trạng thái</th>
+								<th>Chi tiết</th>
 							</tr>
 						</thead>
-						<tbody>
-							<tr>
+						<tbody id="table-body">
+							<!-- <tr>
 								<td>
-									<!-- <img src="img/people.png"> -->
+
 									<p>IT66623</p>
 								</td>
 								<td>Magic Stick</td>
 								<td>1203 VND</td>
 								<td>Phụ kiện</td>
 								<td>Faber Castell</td>
-								<td><span class="status completed">Chi tiết</span></td>
+								<td><span class="status completed">Xem</span></td>
 							</tr>
 							<tr>
 								<td>
-									<!-- <img src="img/people.png"> -->
+
 									<p>IT66623</p>
 								</td>
 								<td>Magic Stick</td>
 								<td>1203 VND</td>
 								<td>Phụ kiện</td>
 								<td>Faber Castell</td>
-								<td><span class="status completed">Chi tiết</span></td>
+								<td><span class="status completed">Xem</span></td>
 							</tr>
 							<tr>
 								<td>
-									<!-- <img src="img/people.png"> -->
+
 									<p>IT66623</p>
 								</td>
 								<td>Magic Stick</td>
 								<td>1203 VND</td>
 								<td>Phụ kiện</td>
 								<td>Faber Castell</td>
-								<td><span class="status completed">Chi tiết</span></td>
+								<td><span class="status completed">Xem</span></td>
 							</tr>
 							<tr>
 								<td>
-									<!-- <img src="img/people.png"> -->
+
 									<p>IT66623</p>
 								</td>
 								<td>Magic Stick</td>
 								<td>1203 VND</td>
 								<td>Phụ kiện</td>
 								<td>Faber Castell</td>
-								<td><span class="status completed">Chi tiết</span></td>
+								<td><span class="status completed">Xem</span></td>
 							</tr>
 							<tr>
 								<td>
-									<!-- <img src="img/people.png"> -->
+
 									<p>IT66623</p>
 								</td>
 								<td>Magic Stick</td>
 								<td>1203 VND</td>
 								<td>Phụ kiện</td>
 								<td>Faber Castell</td>
-								<td><span class="status completed">Chi tiết</span></td>
-							</tr>
+								<td><span class="status completed">Xem</span></td>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
+				
 				<!-- <div class="todo">
 					<div class="head">
 						<h3>Todos</h3>
@@ -266,14 +267,29 @@
 					<canvas id="doughnut" ></canvas>
 				</div>
 			</div> -->
+
+			<!-- Co toi da 5 page hien thi -->
+			<input class="forPaginate" type="radio" name="input-paginacao" id="paginacao1" checked>
+			<input class="forPaginate" type="radio" name="input-paginacao" id="paginacao2">
+			<input class="forPaginate" type="radio" name="input-paginacao" id="paginacao3">
+			<input class="forPaginate" type="radio" name="input-paginacao" id="paginacao4">
+			<input class="forPaginate" type="radio" name="input-paginacao" id="paginacao5">
+
+			<div class="pagination-container">
+				<div class="btn-paginacao">
+					<ul id="pagination-wrapper">
+
+					</ul>
+				</div>
+
+			</div>
+			
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
 	
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-	<script src="script.js"></script>
-	<script src="chart1.js"></script>
-	<script src="chart2.js"></script>
+	<script src="SP_script.js"></script>
 </body>
 </html>

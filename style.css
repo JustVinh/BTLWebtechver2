@@ -589,7 +589,123 @@ body {
 /* CRUD finder end */
 
 
+/* Pagination start */
+ /* .pagination-container{
+	margin-top: 10px;
+} */
+/*
+.btn-info{
+	height: 100%;
+	border-width: 1px;
+	margin-right: 5px;
+} */
 
+input[class*="forPaginate"]{
+	display: none;
+}
+
+  .btn-paginacao {
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	/* background-color: #FFF; */
+  }
+  .btn-paginacao ul {
+	width: auto;
+	height: auto;
+  }
+  .btn-paginacao ul li {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin: 0 5px 0 0;
+	border: 0;
+  }
+  .btn-paginacao ul li:last-child {
+	margin: 0;
+  }
+  .btn-paginacao ul li label {
+	width: 100%;
+	height: 30px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #2E2929;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: background-color .25s ease-in-out;
+  }
+  .btn-paginacao ul li label:hover {
+	/* background-color: #FF1493; */
+	background-color: #FF1493;
+	color: #FFF;
+  }
+
+
+  
+  #paginacao1:checked ~ .pagination-container label[for*="paginacao1"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  #paginacao2:checked ~ .pagination-container label[for*="paginacao2"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  #paginacao3:checked ~ .pagination-container label[for*="paginacao3"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  #paginacao4:checked ~ .pagination-container label[for*="paginacao4"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  #paginacao5:checked ~ .pagination-container label[for*="paginacao5"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  
+  /* #paginacao2:checked ~ .box-vitrines > ul {
+	transition: transform .7s ease-in-out;
+	transform: translateY(-369px);
+  }
+  
+  #paginacao2:checked ~ .box-vitrines label[for="paginacao2"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  
+  #paginacao3:checked ~ .box-vitrines > ul {
+	transition: transform .7s ease-in-out;
+	transform: translateY(-738px);
+  }
+  
+  #paginacao3:checked ~ .box-vitrines label[for="paginacao3"] {
+	background-color: #FF1493;
+	color: #FFF;
+  }
+  
+  #paginacao4:checked ~ .box-vitrines > ul {
+	transition: transform .7s ease-in-out;
+	transform: translateY(-1107px);
+  }
+  
+  #paginacao4:checked ~ .box-vitrines label[for="paginacao4"] {
+	background-color: #FF1493;
+	color: #FFF;
+  } */
+
+/* Pagination end */
 
 
 
@@ -668,4 +784,6 @@ body {
 	.doughnut-chart {
 		padding :50px;
 	}
+	/* thu nho side bar */
+
 }
