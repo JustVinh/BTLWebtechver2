@@ -27,13 +27,13 @@
 					<span class="text">Thống kê</span>
 				</a>
 			</li>
-			<li class="active">
+			<li>
 				<a href="AdminSys_QlySP.html">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Quản lý sản phẩm</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="AdminSys_QlyAcc.html">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">Quản lý tài khoản</span>
@@ -99,20 +99,20 @@
 		<main>
 			<div class="head-title">
 				<div class="left">
-					<h1>Quản lý sản phẩm</h1>
+					<h1>Quản lý tài khoản</h1>
 					<ul class="breadcrumb">
 						<li>
-							<a href="#">Quản lý sản phẩm</a>
+							<a href="#">Quản lý tài khoản</a>
 						</li>
 						<li><i class='bx bx-chevron-right' ></i></li>
 						<li>
-							<a class="active" href="AdminSys_QlySP.html">Trang chủ</a>
+							<a class="active" href="AdminSys_QlyAcc.html">Trang chủ</a>
 						</li>
 					</ul>
 				</div>
-				<a href="AdminSys_QlySP_Add.html" class="btn-download">
+				<a href="AdminSys_QlyAcc_Add.html" class="btn-download">
 					<i class='bx bx-book-add'></i>
-					<span class="text">Thêm sản phẩm</span>
+					<span class="text">Thêm tài khoản</span>
 				</a>
 			</div>
 
@@ -144,7 +144,7 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Danh sách sản phẩm</h3>
+						<h3>Danh sách tài khoản</h3>
 						<form action="#">
 							<div class="form-input">
 								<input type="search" placeholder="Tìm kiếm...">
@@ -159,9 +159,8 @@
 							<tr>
 								<th>Mã</th>
 								<th>Tên</th>
-								<th>Giá<i class='bx bx-filter' ></i></th>
-								<th>Loại</th>
-								<th>Hãng</th>
+								<th>Email</th>
+								<th>Vai trò</th>
 								<th>Chi tiết</th>
 							</tr>
 						</thead>
@@ -236,6 +235,6 @@
 	<!-- CONTENT -->
 	
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-	<script src="SP_script.js"></script>
+	<script src="Acc_script.js"></script>
 </body>
 </html>

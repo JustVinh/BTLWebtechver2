@@ -94,24 +94,32 @@ window.addEventListener('resize', (event) =>{
 
 
 //getData from click
-product = JSON.parse(localStorage.getItem("product2"))
-document.querySelector(".breadcrumb li:nth-child(3) a").innerHTML = "Sản phẩm ID " + product.ma
-document.querySelector("#bigTitle").innerHTML = product.ten
-document.getElementById("name").placeholder= product.ten
-document.getElementById("price").placeholder= product.gia
-document.getElementById("category").placeholder= product.loai
-document.getElementById("brand").placeholder= product.hang
+// product = JSON.parse(localStorage.getItem("product2"))
+// document.querySelector(".breadcrumb li:nth-child(3) a").innerHTML = "Sản phẩm ID " + product.ma
+// document.querySelector("#bigTitle").innerHTML = product.ten
+// document.getElementById("name").placeholder= product.ten
+// document.getElementById("price").placeholder= product.gia
+// document.getElementById("category").placeholder= product.loai
+// document.getElementById("brand").placeholder= product.hang
 
-document.getElementById("name").value= product.ten
-document.getElementById("price").value= product.gia
-document.getElementById("category").value= product.loai
-document.getElementById("brand").value= product.hang
+// document.getElementById("name").value= product.ten
+// document.getElementById("price").value= product.gia
+// document.getElementById("category").value= product.loai
+// document.getElementById("brand").value= product.hang
 
 var prodname = document.getElementById("name")
 var price = document.getElementById("price")
 var category = document.getElementById("category")
 var brand = document.getElementById("brand")
 var descrip = document.getElementById("descrip")
+
+var createDate = document.getElementById("createDate")
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = dd + '/' + mm + '/' + yyyy;
+createDate.innerHTML = today
 //them cac thong tin o day
 
 //
@@ -120,27 +128,20 @@ var descrip = document.getElementById("descrip")
 saveBtn = document.getElementById("saveBtn")
 //call Api
 saveBtn.addEventListener('click', () =>{
-	//call api
-	//not change
-	if(prodname.value === product.ten &&
-		price.value === product.gia &&
-		category.value === product.loai &&
-		brand.value === product.hang &&
-		descrip.value === ""
-		){
-			//do nothing
-		}
-	else{
-		//call api to update
-	}
-	location.href="AdminSys_QlySP.html",true;
+    Confirm.open({
+        title: 'Xác nhận thêm sản phẩm',
+        message: 'Bạn có chắc muốn thêm sản phẩm này chứ?',
+        onok: () => {
+          //call api post
+          location.href="AdminSys_QlySP.html";
+        }
+      })
+	//post api
 	console.log("back")
 })
 //
 
 //delete
-delBtn = document.querySelector(".btn-delete")
-
 const Confirm = {
     open (options) {
         options = Object.assign({}, {
@@ -208,13 +209,3 @@ const Confirm = {
     }
 };
 
-delBtn.addEventListener('click', () => {
-    Confirm.open({
-      title: 'Xác nhận xóa sản phẩm',
-      message: 'Bạn có chắc muốn xóa sản phẩm này chứ?',
-      onok: () => {
-        //call api xoa
-        location.href="AdminSys_QlySP.html";
-      }
-    })
-  });
