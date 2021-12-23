@@ -453,18 +453,36 @@ function buildTable() {
 
 	for (var i = 1 in myList) {
 		console.log(`adding data no ${i}`)
+		var product = myList[i]
 		var row = `<tr>
 				<td>${myList[i].ma}</td>
 				<td>${myList[i].ten}</td>
 				<td>${myList[i].gia}</td>
 				<td>${myList[i].loai}</td>
 				<td>${myList[i].hang}</td>
-				<td><span class="status completed">Xem</span></td>
+				<td><span class="status completed" onclick="openProdDetail(${myList[i].ma})">Xem</span></td>
 				`
+				// var detailTd = document.createElement("td")
+				// var detailBtn = document.createElement("span")
+				// detailBtn.innerHTML="Xem"
+				// detailBtn.classList.add("status")
+				// detailBtn.classList.add("completed")
+				// detailTd.appendChild(detailBtn)
+				
+				// console.log(detailTd.outerHTML)
+		
+				// row = row.concat(detailTd.outerHTML)
 		table.append(row)
 	}
 
 	pageButtons(data.pages)
+}
+
+function openProdDetail(id){
+	localStorage.setItem("product2",JSON.stringify(tableData2.find(x => x.ma == id)))
+	console.log(tableData2.find(x => x.ma == id))
+	location.href="AdminSys_QlySP_Edit.html";
+	console.log(id);
 }
 
 //sortByPrice
